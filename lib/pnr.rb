@@ -24,4 +24,5 @@ def valid_pnr?(pnr:)
 end
 
 p valid_pnr?(pnr:'19971223-3270')
-
+p valid_pnr?(pnr:'19971223-3270')
+p valid_pnr?(pnr:'19971223-3270')
