@@ -49,7 +49,7 @@ def valid_pnr?(pnr:)
 
 end
 
-# p valid_pnr?(pnr:'971223-3270')
+p valid_pnr?(pnr:'970804-1209')
 
 def random_digits(max:)
   digits = rand(1..max).to_s
@@ -91,11 +91,20 @@ p ninefirst
   ninefirst_integer.each { |a| sum += a }
   p ninefirst_integer
   p sum
+  counter = 0
+  while sum.modulo(10) != 0
+    sum += 1
+    counter += 1
+
+  end
+
   # sen ta sum modulo(10).zero? och göra if loop med +1 och spara i en counter
   # tills sum modulo(10).zero? stämmer och lägga in den sista siffran som counter
+  fullnumber = birth_year + month.to_s + day.to_s + county[birth_county].to_s + sexnumber.to_s + counter.to_s
+  p fullnumber
 end
 
-p generate_pnr(birth_year:"97",birth_county:"Stockholm",sex: "female")
+#p generate_pnr(birth_year:"97",birth_county:"Stockholm",sex: "female")
 
 
 
