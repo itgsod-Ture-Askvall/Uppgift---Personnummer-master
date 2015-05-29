@@ -42,7 +42,7 @@ describe 'generate_pnr' do
 
   it 'generates correct "birth_year-digits" ' do
     generate_pnr(birth_year: 78, birth_county: 'Halland',     sex: 'male')[0..1].must_match /78/
-    generate_pnr(birth_year: 68, birth_county: 'Norrbotten',  sex: 'male')[0..1].must_match /28/
+    generate_pnr(birth_year: 68, birth_county: 'Norrbotten',  sex: 'male')[0..1].must_match /68/
     generate_pnr(birth_year: 86, birth_county: 'Gotland',     sex: 'male')[0..1].must_match /86/
   end
 
